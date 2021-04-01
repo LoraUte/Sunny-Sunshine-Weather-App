@@ -16,37 +16,31 @@
         <div class="weather-app">
             <div class="overview">
             <a href="" class="btn btn-primary">Click</a>
-    <h1> 
-        New York
+    <h1 id="city"> 
         </h1> 
         <ul>
             <li>
                 Friday 05.00
             </li>
-            <li>
+            <li id="description">
                 Clear
             </li>
         </ul>
         </div>
         <div class="row">
             <div class="col-6">
-                <div class="clearfix weather-temperature">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" 
-                alt="Clear"
-                class="float-left"
-                />
-                <div class="float-left">
-                <strong>12</strong><span class="units">°C | <a href="#">°F</a></span>
-        </div>
+        <div class=“clearfix weather-temperature”>
+            <img src=“https://ssl.gstatic.com/onebox/weather/64/sunny.png” alt=“Clear” class=“float-left” />
+            <div class=“float-left”>
+                <strong id="temperature"></strong><span class=“units”>°C | <a href=“#”>°F</a></span>
+            </div>
         </div>
     </div>
+</div>
             <div class="col-6">
                 <ul>
                     <li>
-                        Precipitation: 0%
-                    </li>
-                    <li>
-                        Humidity: 73%
+                        Humidity: <span id="humidity"></span>%
                     </li>
                     <li>
                         Wind: 2km/h
