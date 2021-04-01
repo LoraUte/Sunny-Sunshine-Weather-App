@@ -4,7 +4,7 @@ function formatDate(timestamp) {
     if (hours < 10) {
         hours = `0${hours}`;
     }
-    let minutes = date.getMimnutes();
+    let minutes = date.getMinutes();
     if (minutes < 10) {
         minutes = `0${minutes}`;
     }
@@ -25,19 +25,19 @@ function formatDate(timestamp) {
 function displayTemperature(response) {
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
-    let descriptionElement = document.quesrySelector("#description");
-    let humidityElement = document.quesrySelector("#humidity");
-    let windElement = document.quesrySelector("#wind");
-    let dateElement = document.quesrySelector("#date");
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    let windElement = document.querySelector("#wind");
+    let dateElement = document.querySelector("#date");
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
-    dateElement.innerHTML = function(response.data.dt * 1000);
+    dateElement.innerHTML = function(response.data.dt *1000);
 }
 
-let apiKey = "7b820e879ed80de3bf7669ee4de78151";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=NewYork&appid=${apiKey}&units=metric`;
+let apiKey = "6e32c0b8c11d15abeec4c1e1d86ae403";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
