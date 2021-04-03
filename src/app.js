@@ -43,9 +43,19 @@ function displayTemperature(response) {
         "alt", 
         response.data.weather[0].description);
 }
-
+function search(city) {
 let apiKey = "6e32c0b8c11d15abeec4c1e1d86ae403";
-let city = "Paris";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
 axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();  
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Ney York");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
