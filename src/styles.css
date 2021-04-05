@@ -30,28 +30,46 @@ li:first-letter {
     text-transform: capitalize;
 }
 
-.weather-app-wrapper {
-    max-width: 600px;
-    margin: 30px auto;
-    
+footer {
+    text-align: center;
+}
 
+.weather-app-wrapper {
+    max-width: 550px;
+    margin: 30px auto;
 }
 
 .weather-app {
     padding: 20px;
     border: 1px solid #dadde1;
-    border-radius: 5px;
+    border-radius: 10px;
     background-image: linear-gradient(to right, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.search {
+    background: #440a67; 
+    border-radius: 10px;
+    width: 100px;
+    margin: 0;
+
+}
+.success {
+    background: #93329e;
+    border-radius: 10px;
+    width: 100px;
+    margin: 0;
 }
 
 .overview {
     margin-bottom: 25px;
+    
 }
 
 .weather-temperature img {
 margin-right: 10px;
 height: 64px;
 width: 64px;
+
 }
 
 .weather-temperature strong {
@@ -73,7 +91,6 @@ width: 64px;
 }
 
 .weather-temperature .active:hover {
-    
     cursor: default;
 }
 
@@ -94,4 +111,8 @@ opacity: 0.5;
 
 .weather-forecast-temperature {
 font-size: 13px;
+}
+
+.card {
+    background: #ffe3fe;
 }
