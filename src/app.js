@@ -154,4 +154,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-searchCity("Barcelona");
+var cities = ["Barcelona", "New York", "Napoli"];
+var city = cities[Math.floor(Math.random()*cities.length)];
+searchCity(city);
